@@ -1,0 +1,65 @@
+# PayTo (payto)
+
+PayTo is Australia's real-time mandated-payments service, operated by Australian Payments Plus (AP+) as an overlay on the New Payments Platform (NPP). It lets merchants, billers, and payment service providers establish digital, pre-authorised agreements (mandates) that debit a customer's bank account in real time using a PayID or BSB and account number, with the mandate authorised and managed by the account holder inside their own banking app. PayTo is the modern successor to the legacy BECS direct-debit rails, adding instant settlement, richer ISO 20022 data, and central mandate management via the NPP Mandate Management Service.
+
+As a domestic rail and scheme operator, AP+/NPP Australia is documentation- and rulebook-first: it publishes the NPP API Framework (aligned to ISO 20022) that defines the mandatory data attributes and technical approach for PayTo and NPP APIs, but it does not itself host or offer a self-serve public API. The production PayTo APIs are implemented and exposed by NPP Participants (banks) and connected payment service providers.
+
+**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/payto/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/payto/refs/heads/main/apis.yml)
+
+## Tags
+
+- Payments
+- Australia
+- Real-Time Payments
+- Account-to-Account
+- ISO 20022
+- Direct Debit
+- Mandates
+- New Payments Platform
+- Scheme Operator
+- Open Banking
+
+## Timestamps
+
+- **Created:** 2026-07-24
+- **Modified:** 2026-07-24
+
+## APIs
+
+### PayTo / NPP Developer Resources
+
+PayTo's public developer surface, published by AP+ and NPP Australia. Rather than a self-serve API hosted by the scheme, this covers the AP+ Developer Portal (login-gated APIs and documentation sections), the NPP API Framework v5.0 that defines the ISO 20022-aligned data attributes and technical approach for PayTo agreements and payment initiation, and the NPP API sandbox for building and testing NPP-based solutions. The production PayTo APIs are implemented by NPP Participants and connected payment service providers, not by the scheme itself.
+
+- **Human URL:** [https://www.developers.auspayplus.com.au/](https://www.developers.auspayplus.com.au/)
+
+#### Tags
+
+- PayTo
+- NPP
+- Mandates
+- ISO 20022
+
+#### Properties
+
+- [Developer Portal](https://www.developers.auspayplus.com.au/)
+- [Documentation](https://www.developers.auspayplus.com.au/docs/)
+- [NPP For Developers](https://www.auspayplus.com.au/brands/nppa-for-developers)
+- [NPP Resources & FAQs](https://www.auspayplus.com.au/solutions/npp-resources-faqs)
+- [NPP API Framework v5.0 (PDF)](https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf)
+
+## Common Properties
+
+- [Website](https://www.auspayplus.com.au/brands/payto)
+- [Developer Portal](https://www.developers.auspayplus.com.au/)
+- [Documentation](https://www.developers.auspayplus.com.au/docs/)
+- [Sign Up](https://www.developers.auspayplus.com.au/api/auth/signup/)
+- [Blog / News](https://www.auspayplus.com.au/news)
+- [Support](https://www.auspayplus.com.au/contact-us)
+- [Terms of Service](https://www.auspayplus.com.au/terms-of-use)
+- [Privacy Policy](https://www.auspayplus.com.au/privacy-policy)
+- [LinkedIn](https://www.linkedin.com/company/auspayplus)
+
+## Maintainers
+
+**FN:** Kin Lane
+**Email:** kin@apievangelist.com

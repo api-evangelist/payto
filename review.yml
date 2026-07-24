@@ -1,0 +1,123 @@
+aid: payto
+name: PayTo
+review:
+  question: Does PayTo publish a downloadable public OpenAPI/Swagger and a self-serve developer API?
+  answer: false
+  date: '2026-07-24'
+  reviewer: API Evangelist
+findings:
+  summary: >-
+    PayTo is not a self-serve PSP with a downloadable OpenAPI; it is a domestic
+    real-time payments SCHEME operated by Australian Payments Plus (AP+) as a
+    mandated-payments overlay on the New Payments Platform (NPP). payto.com.au
+    302-redirects to auspayplus.com.au/brands/payto. AP+ runs a live, consolidated
+    developer portal at https://www.developers.auspayplus.com.au/ (HTTP 200) that
+    replaced the separate legacy NPP, BPAY, and eftpos portals; its APIs (/apis/,
+    HTTP 200) and Documentation (/docs/, HTTP 200) sections sit behind a login /
+    sign-up wall (/api/auth/signup/, HTTP 200), so individual named API specs could
+    not be enumerated anonymously. Critically, NPP Australia states plainly that it
+    "does not offer APIs" for third-party use — it publishes the ISO 20022-aligned
+    NPP API Framework (v5.0 PDF, HTTP 200, application/pdf) defining the mandatory
+    data attributes and technical approach, and a SWIFT-hosted sandbox
+    (nppa-developer.swift.com), while the production PayTo agreement, amendment,
+    suspend/cancel, and payment-initiation APIs are implemented and exposed by NPP
+    Participants (banks) and connected PSPs such as Monoova, Zepto, Azupay, Ezypay,
+    and Shaype. No first-party downloadable OpenAPI/Swagger, no public Postman
+    collection, no GraphQL, and no AsyncAPI were found for the scheme itself. This is
+    a documentation- and rulebook-first rail, so an honest identity plus a
+    docs/framework pointer record is the correct posture. Home market is Australia.
+  homeMarket: Australia
+  tier: rails-scheme
+  operator: Australian Payments Plus (AP+) / NPP Australia (NPPA)
+  rail:
+    name: New Payments Platform (NPP) — PayTo overlay
+    type: real-time account-to-account
+    settlement: real-time (instant)
+    messaging: ISO 20022
+    addressing: PayID (also BSB + account number)
+    mandateManagement: NPP Mandate Management Service (MMS)
+    legacyPredecessor: BECS direct debit
+  developerPortal:
+    url: https://www.developers.auspayplus.com.au/
+    status: 200
+    confirmed: true
+    note: >-
+      Live consolidated AP+ developer portal (formerly separate NPP/BPAY/eftpos
+      portals). APIs and Documentation sections require login/sign-up.
+  downloadableSpecs:
+    openapi: false
+    count: 0
+    note: >-
+      No first-party OpenAPI/Swagger published by the scheme. /openapi.json,
+      /swagger.json, and /api-docs on the portal host all returned HTTP 404. The
+      published technical artifact is the NPP API Framework (ISO 20022-aligned PDF),
+      not a machine-readable spec.
+  postman: false
+  graphql: false
+  asyncapi: false
+  webhooks:
+    documented: unknown
+    note: >-
+      PayTo agreement lifecycle events (create/amend/suspend/cancel/payment) are
+      exchanged as ISO 20022 messages between participants over the NPP; any
+      webhook/event surface is defined at the participant/PSP implementation layer,
+      not by the scheme's public pages.
+  authModel:
+    scheme: >-
+      No public self-serve auth is offered by the scheme. Participant/PSP PayTo APIs
+      built to the NPP API Framework are documentation-first (framework aligned to
+      ISO 20022 and FAPI-grade security expectations); AP+ portal access itself is a
+      login/sign-up gate. No specific OAuth scopes were published anonymously and
+      none are asserted here.
+    confidence: medium
+  transports:
+    - protocol: REST
+      scheme: https
+      note: >-
+        Participant-implemented PayTo/NPP APIs are RESTful per the NPP API Framework;
+        the scheme does not host a base URL for third-party use.
+      documented: true
+      hostedByScheme: false
+    - protocol: ISO 20022 messaging
+      scheme: npp
+      note: Underlying real-time clearing/settlement and mandate messaging over the NPP.
+      documented: true
+  sources:
+    - url: https://payto.com.au
+      type: Website
+      status: 302
+      note: Redirects to https://www.auspayplus.com.au/brands/payto.
+    - url: https://www.auspayplus.com.au/brands/payto
+      type: Website
+      status: 200
+      note: Official PayTo brand/overview page operated by AP+.
+    - url: https://www.developers.auspayplus.com.au/
+      type: DeveloperPortal
+      status: 200
+      note: Consolidated AP+ developer portal; APIs/docs behind login.
+    - url: https://www.developers.auspayplus.com.au/docs/
+      type: Documentation
+      status: 200
+    - url: https://www.auspayplus.com.au/brands/nppa-for-developers
+      type: Documentation
+      status: 200
+      note: States NPP Australia does not offer APIs; participants do.
+    - url: https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf
+      type: SDKDocumentation
+      status: 200
+      note: NPP API Framework v5.0, ISO 20022-aligned (application/pdf).
+    - url: https://www.auspayplus.com.au/solutions/npp-resources-faqs
+      type: Documentation
+      status: 200
+    - url: https://www.developers.auspayplus.com.au/openapi.json
+      type: OpenAPI
+      status: 404
+      note: No first-party machine-readable spec at conventional path.
+actions:
+  status: built-stub
+  reason: >-
+    Honest identity record for a documentation/rulebook-first domestic payments
+    scheme. Live developer portal confirmed but no anonymously reachable, downloadable
+    first-party OpenAPI/Swagger; self-serve PayTo APIs are a participant/PSP concern.
+    apis.yml points to the real developer portal, docs, and NPP API Framework; no
+    specs were harvested because none are published by the scheme.
