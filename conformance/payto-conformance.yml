@@ -1,0 +1,29 @@
+generated: '2026-07-24'
+method: derived
+source: NPP API Framework v5.0 (https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf) + apis.yml description
+note: >-
+  PayTo/NPP is a documentation- and rulebook-first domestic scheme. The scheme
+  operator (AP+/NPP Australia) does not host a self-serve public API; conformance
+  claims below are derived from the published NPP API Framework and PayTo
+  positioning, not from a machine-readable OpenAPI (none is published).
+standards:
+- id: iso20022
+  conforms: true
+  evidence: >-
+    The NPP API Framework v5.0 defines the mandatory data attributes and technical
+    approach for PayTo and NPP APIs aligned to the ISO 20022 financial-messaging
+    standard.
+- id: real-time-payments
+  conforms: true
+  evidence: >-
+    PayTo runs as an overlay service on the New Payments Platform (NPP), Australia's
+    real-time account-to-account clearing and settlement rail, providing instant
+    settlement for mandated payments.
+- id: psd2
+  conforms: false
+  evidence: >-
+    PayTo is an Australian domestic scheme governed by NPP rules and the Consumer
+    Data Right, not the EU PSD2 regime.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No public OpenAPI is published to assert an error-envelope format.

@@ -32,6 +32,7 @@ tags:
 - Open Banking
 created: '2026-07-24'
 modified: '2026-07-24'
+enriched: '2026-07-24'
 specificationVersion: '0.19'
 apis:
 - aid: payto:payto-npp-developer-resources
@@ -62,6 +63,14 @@ apis:
   - type: SDKDocumentation
     url: https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf
 common:
+- type: DomainSecurity
+  url: security/payto-domain-security.yml
+- type: Conformance
+  url: conformance/payto-conformance.yml
+- type: LLMsTxt
+  url: llms/payto-llms.txt
+- type: GitHubOrganization
+  url: https://github.com/auspayplus
 - type: Website
   url: https://www.auspayplus.com.au/brands/payto
 - type: DeveloperPortal

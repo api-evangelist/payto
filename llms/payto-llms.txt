@@ -1,0 +1,27 @@
+# PayTo
+
+> PayTo is Australia's real-time mandated-payments service, operated by Australian Payments Plus (AP+) as an overlay on the New Payments Platform (NPP). It lets merchants, billers, and payment service providers establish digital, pre-authorised agreements (mandates) that debit a customer's bank account in real time using a PayID or BSB and account number, with the mandate authorised and managed by the account holder inside their own banking app. PayTo is positioned as the modern successor to legacy BECS direct debit, adding instant settlement, richer ISO 20022 data, and central mandate management via the NPP Mandate Management Service.
+
+As a domestic rail and scheme operator, AP+/NPP Australia is documentation- and rulebook-first: it publishes the NPP API Framework (v5.0, aligned to ISO 20022) that defines the mandatory data attributes and technical approach for PayTo and NPP APIs, but it does not itself host or offer a self-serve public API. The production PayTo APIs are implemented and exposed by NPP Participants (banks) and connected payment service providers. There is no public OpenAPI, GraphQL, MCP server, or AsyncAPI document; the developer portal APIs and documentation sections are login-gated.
+
+## Developer resources
+
+- [AP+ Developer Portal](https://www.developers.auspayplus.com.au/): Login-gated APIs and documentation sections for NPP-based solutions.
+- [Developer documentation](https://www.developers.auspayplus.com.au/docs/): Login-gated docs for the NPP API framework and sandbox.
+- [NPP for developers](https://www.auspayplus.com.au/brands/nppa-for-developers): Public overview of NPP developer resources.
+- [NPP resources and FAQs](https://www.auspayplus.com.au/solutions/npp-resources-faqs): Public resource and FAQ hub.
+- [NPP API Framework v5.0 (PDF)](https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf): ISO 20022-aligned data attributes and technical approach for PayTo and NPP APIs.
+
+## Company
+
+- [PayTo product page](https://www.auspayplus.com.au/brands/payto): Scheme overview and positioning.
+- [Sign up](https://www.developers.auspayplus.com.au/api/auth/signup/): Register for developer portal access.
+- [News](https://www.auspayplus.com.au/news): Australian Payments Plus news and announcements.
+- [Support / contact](https://www.auspayplus.com.au/contact-us): Contact Australian Payments Plus.
+- [Terms of use](https://www.auspayplus.com.au/terms-of-use)
+- [Privacy policy](https://www.auspayplus.com.au/privacy-policy)
+
+## Notes for agents
+
+- No machine-readable API contract is published by the scheme; integration is via NPP Participants (banks) and connected payment service providers under the NPP rulebook.
+- Data model and messaging follow ISO 20022 as defined in the NPP API Framework v5.0.
