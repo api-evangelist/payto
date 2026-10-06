@@ -54,7 +54,7 @@ tags:
 - Scheme Operator
 - Open Banking
 created: '2026-07-24'
-modified: '2026-07-24'
+modified: '2026-10-06'
 enriched: '2026-07-24'
 specificationVersion: '0.23'
 apis:
@@ -86,6 +86,8 @@ apis:
   - type: SDKDocumentation
     url: https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf
 common:
+- url: https://www.auspayplus.com.au/feed
+  type: BlogRSS
 - type: DomainSecurity
   url: security/payto-domain-security.yml
 - type: Conformance
