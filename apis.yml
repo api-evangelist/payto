@@ -71,6 +71,11 @@ apis:
   humanURL: https://www.developers.auspayplus.com.au/
   tags:
   - PayTo
+  - New Payments Platform
+  - Mandates
+  - ISO 20022
+  tags_raw:
+  - PayTo
   - NPP
   - Mandates
   - ISO 20022
