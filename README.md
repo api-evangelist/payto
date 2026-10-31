@@ -1,4 +1,4 @@
-# PayTo (payto)
+# PayTo
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,66 +64,90 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-PayTo is Australia's real-time mandated-payments service, operated by Australian Payments Plus (AP+) as an overlay on the New Payments Platform (NPP). It lets merchants, billers, and payment service providers establish digital, pre-authorised agreements (mandates) that debit a customer's bank account in real time using a PayID or BSB and account number, with the mandate authorised and managed by the account holder inside their own banking app. PayTo is the modern successor to the legacy BECS direct-debit rails, adding instant settlement, richer ISO 20022 data, and central mandate management via the NPP Mandate Management Service.
+PayTo is Australia's real-time mandated-payments service, operated by Australian Payments Plus (AP+) as an overlay on the New Payments Platform (NPP). It lets merchants, billers, and payment service providers establish digital, pre-authorised agreements (mandates) that debit a customer's bank account in real time using either a PayID or BSB and account number, with the mandate authorised, viewed, and managed by the account holder inside their own banking app. PayTo is positioned as the modern successor to the legacy BECS direct-debit rails, adding instant settlement, richer ISO 20022 data, and central mandate management via the NPP Mandate Management Service. As a domestic rail and scheme operator, AP+/NPP Australia is documentation- and rulebook-first: it publishes the NPP API Framework (v5.0, aligned to ISO 20022) that defines the mandatory data attributes and technical approach for PayTo and NPP APIs, but it does not itself host or offer a self-serve public API. The actual PayTo APIs are implemented and exposed by NPP Participants (banks) and connected payment service providers, so the company's public developer surface is a portal, framework, sandbox, and message specifications rather than a downloadable OpenAPI.
 
-As a domestic rail and scheme operator, AP+/NPP Australia is documentation- and rulebook-first: it publishes the NPP API Framework (aligned to ISO 20022) that defines the mandatory data attributes and technical approach for PayTo and NPP APIs, but it does not itself host or offer a self-serve public API. The production PayTo APIs are implemented and exposed by NPP Participants (banks) and connected payment service providers.
+**Areas:** Payments · Australia · Real-Time Payments · Account-to-Account · ISO 20022 · Direct Debit · Mandates · New Payments Platform · Scheme Operator · Open Banking
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/payto/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/payto/refs/heads/main/apis.yml)
+## PayTo on APIs.io
 
-## Tags
+Everything profiled for PayTo is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/payto/](https://apis.io/providers/payto/)** — or go straight to one of the APIs or properties below.
 
-- Payments
-- Australia
-- Real-Time Payments
-- Account-to-Account
-- ISO 20022
-- Direct Debit
-- Mandates
-- New Payments Platform
-- Scheme Operator
-- Open Banking
+### APIs (1)
 
-## Timestamps
+- [PayTo / NPP Developer Resources](https://apis.io/apis/payto/payto-npp-developer-resources/) — PayTo's public developer surface, published by Australian Payments Plus (AP+) and NPP Australia. Rather than a self-serve API hosted by the scheme, this…
 
-- **Created:** 2026-07-24
-- **Modified:** 2026-07-24
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### PayTo / NPP Developer Resources
+#### Security (1)
 
-PayTo's public developer surface, published by AP+ and NPP Australia. Rather than a self-serve API hosted by the scheme, this covers the AP+ Developer Portal (login-gated APIs and documentation sections), the NPP API Framework v5.0 that defines the ISO 20022-aligned data attributes and technical approach for PayTo agreements and payment initiation, and the NPP API sandbox for building and testing NPP-based solutions. The production PayTo APIs are implemented by NPP Participants and connected payment service providers, not by the scheme itself.
+Authentication, trust centre, and vulnerability disclosure.
 
-- **Human URL:** [https://www.developers.auspayplus.com.au/](https://www.developers.auspayplus.com.au/)
+- [Payto Domain Security](https://apis.io/security/payto/payto-domain-security/)
 
-#### Tags
+## Where to find this API
 
-- PayTo
-- NPP
-- Mandates
-- ISO 20022
-
-#### Properties
-
-- [Developer Portal](https://www.developers.auspayplus.com.au/)
-- [Documentation](https://www.developers.auspayplus.com.au/docs/)
-- [NPP For Developers](https://www.auspayplus.com.au/brands/nppa-for-developers)
-- [NPP Resources & FAQs](https://www.auspayplus.com.au/solutions/npp-resources-faqs)
-- [NPP API Framework v5.0 (PDF)](https://www.auspayplus.com.au/wp-content/uploads/2024/06/NPP-API-Framework-v5.0.pdf)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.auspayplus.com.au/brands/payto)
-- [Developer Portal](https://www.developers.auspayplus.com.au/)
 - [Documentation](https://www.developers.auspayplus.com.au/docs/)
-- [Sign Up](https://www.developers.auspayplus.com.au/api/auth/signup/)
-- [Blog / News](https://www.auspayplus.com.au/news)
+- [Sign up](https://www.developers.auspayplus.com.au/api/auth/signup/)
 - [Support](https://www.auspayplus.com.au/contact-us)
-- [Terms of Service](https://www.auspayplus.com.au/terms-of-use)
-- [Privacy Policy](https://www.auspayplus.com.au/privacy-policy)
-- [LinkedIn](https://www.linkedin.com/company/auspayplus)
+- [Blog](https://www.auspayplus.com.au/news)
+- [Terms of service](https://www.auspayplus.com.au/terms-of-use)
+- [Privacy policy](https://www.auspayplus.com.au/privacy-policy)
+- [GitHub](https://github.com/auspayplus)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 18.6** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 26.2 |
+| Access clarity | 34.2 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.0** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/payto/](https://apis.io/providers/payto/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for PayTo: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/payto/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
